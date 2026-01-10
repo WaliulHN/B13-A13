@@ -41,7 +41,7 @@ nav {
 }
 
 .logo:hover {
-  color: #256d45; /* Darker green on hover */
+  color: #256d45; 
 }
 html {
   scroll-behavior: smooth;
@@ -85,7 +85,7 @@ html {
    .badge-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem; /* Space between icon and text */
+  gap: 0.5rem; 
   background: white;
   color: #2e8b57;
   padding: 0.3rem 0.8rem;
@@ -96,7 +96,7 @@ html {
   transition: all 0.2s ease;
 }
 
-/* Hover Effect: Option A — Green background, white text */
+
 .badge-link:hover {
   background: #2e8b57;
   color: white;
@@ -105,8 +105,8 @@ html {
     .check-badge-icon {
   width: 16px;
   height: 16px;
-  margin-right: 0.5rem;   /* Space between icon and text */
-  vertical-align: middle; /* Centers icon vertically */
+  margin-right: 0.5rem;   
+  vertical-align: middle; 
 }
 
 
@@ -163,15 +163,15 @@ html {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-flex;     /* ← Use inline-flex to avoid full-width */
+  display: inline-flex;     
   align-items: center;
   gap: 0.5rem;
   transition: background 0.2s;
-  text-decoration: underline; /* ← Add underline */
+  text-decoration: underline;
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.1); /* Optional: slight tint on hover */
+  background: rgba(255,255,255,0.1); 
 }
 
  .play-icon {
@@ -179,12 +179,12 @@ html {
   height: 20px;
   margin-right: 0.5rem;
   vertical-align: middle;
-  filter: brightness(0) invert(1); /* Optional: if icon is dark, make it white */
+  filter: brightness(0) invert(1); 
 }
      .btn-secondary:hover {
       background: rgba(255,255,255,0.1);
     }
-/* === Problems Section === */
+
     .problems {
       padding: 4rem 0;
       background: whitesmoke;
@@ -232,18 +232,18 @@ html {
       font-size: 0.95rem;
     }
 
-     /* === Solution Section === */
+     
  .solution {
   padding: 5rem 0;
   display: flex;
-  gap: 2rem;             /* ← Reduced from 3rem for tighter fit */
-  align-items: center;   /* ← Center vertically — THIS IS KEY! */
-  justify-content: center; /* Optional: centers entire section horizontally */
+  gap: 2rem;             
+  align-items: center;  
+  justify-content: center; 
   flex-wrap: wrap;
 }
 
 .solution-image {
-  flex: 0 0 45%;         /* ← Takes 45% width on desktop */
+  flex: 0 0 45%;        
   min-width: 300px;
   text-align: center;
 }
@@ -307,7 +307,7 @@ html {
   background: url('check-circle.png') no-repeat center center;
   background-size: contain;
   margin-right: 0.75rem;
-  margin-left: -0.25rem;   /* ← Shifts icon slightly left */
+  margin-left: -0.25rem;   
   vertical-align: middle;
 }
 
@@ -319,7 +319,7 @@ html {
   vertical-align: middle;
 }
 
-    /* === CTA Section === */
+    
     .cta-section {
       background: lightgoldenrodyellow;
       padding: 4rem 1rem;
@@ -346,18 +346,18 @@ html {
     }
 
 
- /* === Footer === */
+ 
  footer {
   background: #0a1929;
   color: white;
   padding: 2rem 1rem;
-  text-align: center; /* ← For copyright to be centered */
+  text-align: center;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Top-align content */
+  align-items: flex-start; 
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -381,7 +381,7 @@ html {
 .social-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Right-align content */
+  align-items: flex-end; 
   gap: 0.5rem;
 }
 
@@ -423,7 +423,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem; /* Space between line and copyright */
+  gap: 0.75rem; 
   margin-top: 2rem;
 }
 
@@ -431,7 +431,7 @@ html {
   width: 90%;
   max-width: 1200px;
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light white line */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
   margin: 0;
 }
 
@@ -441,7 +441,7 @@ html {
   text-align: center;
 }
 
-       /* === Responsive Adjustments === */
+       
     @media (max-width: 768px) {
       .nav-links {
         display: none; /* Simple mobile fallback: hide non-essential links */
