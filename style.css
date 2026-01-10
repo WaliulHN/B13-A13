@@ -29,14 +29,23 @@ nav {
     }
 
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2e8b57;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: seagreen;
-      text-decoration: none;
-    }
-
+.logo:hover {
+  color: #256d45; /* Darker green on hover */
+}
+html {
+  scroll-behavior: smooth;
+}
 
  .nav-links {
       display: flex;
@@ -73,16 +82,32 @@ nav {
       margin-bottom: 3rem;
     }
 
-     .badge {
-      background: white;
-      color: seagreen;
-      display: inline-block;
-      padding: 0.25rem 1rem;
-      border-radius: 20px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
+   .badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  background: white;
+  color: #2e8b57;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect: Option A — Green background, white text */
+.badge-link:hover {
+  background: #2e8b57;
+  color: white;
+}
+
+    .check-badge-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;   /* Space between icon and text */
+  vertical-align: middle; /* Centers icon vertically */
+}
 
 
        .hero h1 {
@@ -130,12 +155,32 @@ nav {
       background: darkgreen;
     }
 
-    .btn-secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
+  .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;     /* ← Use inline-flex to avoid full-width */
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+  text-decoration: underline; /* ← Add underline */
+}
 
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1); /* Optional: slight tint on hover */
+}
+
+ .play-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* Optional: if icon is dark, make it white */
+}
      .btn-secondary:hover {
       background: rgba(255,255,255,0.1);
     }
@@ -188,56 +233,91 @@ nav {
     }
 
      /* === Solution Section === */
-    .solution {
-      padding: 5rem 0;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+ .solution {
+  padding: 5rem 0;
+  display: flex;
+  gap: 2rem;             /* ← Reduced from 3rem for tighter fit */
+  align-items: center;   /* ← Center vertically — THIS IS KEY! */
+  justify-content: center; /* Optional: centers entire section horizontally */
+  flex-wrap: wrap;
+}
 
-    .solution-image {
-      flex: 1;
-      min-width: 300px;
-      text-align: center;
-    }
+.solution-image {
+  flex: 0 0 45%;         /* ← Takes 45% width on desktop */
+  min-width: 300px;
+  text-align: center;
+}
 
-    .solution-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
+.solution-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
 
-    .solution-text {
-      flex: 1;
-      min-width: 300px;
-      margin-left: 1rem;
-    }
+.solution-text {
+  flex: 1;
+  min-width: 300px;
+}
 
-    .solution-text .tag {
-      color: #2e8b57;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
+.solution-text .tag {
+  color: #2e8b57;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  display: block;
+}
 
+.solution-text h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #1a2b3c;
+}
 
-     .solution-text h2 {
-      font-size: 2.25rem;
-      margin-bottom: 1.25rem;
-    }
+.solution-desc {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  max-width: 400px;
+}
 
-    .solution-text p {
-      color: #666;
-      margin-bottom: 1.5rem;
-    }
+.benefits {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 
+.benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #666;
+  font-size: 1rem;
+}
 
+.benefits li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('check-circle.png') no-repeat center center;
+  background-size: contain;
+  margin-right: 0.75rem;
+  margin-left: -0.25rem;   /* ← Shifts icon slightly left */
+  vertical-align: middle;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+   margin-left: -2.8rem;
+  vertical-align: middle;
+}
 
     /* === CTA Section === */
     .cta-section {
